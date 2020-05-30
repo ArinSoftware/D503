@@ -1,1 +1,44 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+/** FONTS **/
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Open+Sans:wght@300&display=swap");
+/** VARIABLES **/
+/** GENERAL SETTINGS **/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #9F9F9F;
+  background-color: #FEFEFE;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Changa", sans-serif;
+  /* color: $light-color; */
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
