@@ -41,4 +41,51 @@ ul {
 img {
   width: 100%;
 }
-/*# sourceMappingURL=styles.css.map */
+
+/**  TOP HEADER **/
+.top-header {
+  border-bottom: 1px solid #E51515;
+}
+
+.top-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-header .container .logo h1 {
+  font-size: 5rem;
+  font-family: "Changa", sans-serif;
+  color: #E51515;
+}
+
+.top-header .container .top-social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-header .container .top-social-menu li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.top-header .container .top-social-menu li a {
+  font-size: 2rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.top-header .container .top-social-menu li:hover a {
+  color: #E51515;
+}
+
+.top-header .container .login-area span {
+  display: none;
+}

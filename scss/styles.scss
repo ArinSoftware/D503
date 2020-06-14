@@ -1,17 +1,5 @@
-/** FONTS **/
-
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Open+Sans:wght@300&display=swap');
-
-/** VARIABLES **/
-
-$primary-font: 'Changa', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
-$primary-color: #E51515;
-$secondary-color: #14151A;
-$date-color: #FFB320;
-$comment-color:#08ABBD;
-$gray-color:#9F9F9F;
-$light-color:#FEFEFE;
+@import 'abstracts';
+@import 'components';
 
 /** GENERAL SETTINGS **/
 
@@ -52,4 +40,49 @@ ul {
 
 img {
   width: 100%;
+}
+
+/**  TOP HEADER **/
+
+.top-header {
+  border-bottom: 1px solid $primary-color;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+
+      h1 {
+        font-size: 5rem;
+        font-family: $primary-font;
+        color: $primary-color;
+      }
+    }
+
+    .top-social-menu {
+      display: flex;
+
+      li {
+        margin: 0 1rem;
+        padding: 1rem;
+
+        a {
+          font-size: 2rem;
+          transition: all .5s;
+        }
+
+        &:hover a {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .login-area {
+      span {
+        display: none;
+      }
+    }
+  }
 }
