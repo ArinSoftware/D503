@@ -12,3 +12,22 @@ $date-color: #FFB320;
 $comment-color:#08ABBD;
 $gray-color:#9F9F9F;
 $light-color:#FEFEFE;
+
+
+/** UTILITIES **/
+
+.bg {
+    &-dark {
+        background-color: $secondary-color; 
+    }
+
+    &-light {
+        background-color: $light-color;
+    }
+}
+
+.ml {
+    &-2 { 
+        margin-left: 2rem;
+    }
+}

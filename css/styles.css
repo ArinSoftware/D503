@@ -1,6 +1,46 @@
 /** FONTS **/
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Open+Sans:wght@300&display=swap");
 /** VARIABLES **/
+/** UTILITIES **/
+.bg-dark {
+  background-color: #14151A;
+}
+
+.bg-light {
+  background-color: #FEFEFE;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.btn {
+  background-color: #FEFEFE;
+  color: #E51515;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.btn:hover {
+  background-color: #E51515;
+  color: #FEFEFE;
+}
+
+.btn-primary {
+  background-color: #E51515;
+  color: #FEFEFE;
+}
+
+.btn-primary:hover {
+  background-color: #FEFEFE;
+  color: #E51515;
+}
+
 /** GENERAL SETTINGS **/
 *,
 *::after,
@@ -31,7 +71,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Changa", sans-serif;
-  /* color: $light-color; */
+  color: #FEFEFE;
 }
 
 ul {
