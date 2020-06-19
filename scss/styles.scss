@@ -48,9 +48,7 @@ img {
   border-bottom: 1px solid $primary-color;
 
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-display(flex, center, space-between);
 
     .logo {
 
@@ -84,5 +82,79 @@ img {
         display: none;
       }
     }
+  }
+}
+
+
+/**  NAV HEADER **/
+
+.nav-header {
+  .navbar {
+    @include flex-display(flex, center, space-between);
+
+    .navbar-list {
+      display: flex;
+
+      li {
+        line-height: 8rem;
+        position: relative;
+        transition: all .5s;
+
+        .dropdown {
+          position: absolute;
+          background-color: lighten($secondary-color, 10%);
+          width: 150%;
+          left: 50%;
+          z-index: 10;
+          top: 12rem;
+          transition: all .5s;
+          opacity: 0;
+
+          li {
+            line-height: 4rem;
+          }
+        }
+
+        &:hover {
+          background-color: $primary-color;
+
+          & .dropdown {
+            opacity: 1;
+            top: 8rem;
+          }
+        }
+      }
+
+      a {
+        padding: 0 2rem;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+      }
+
+      i {
+        color: $light-color;
+        font-size: 1.6rem;
+        margin-right: 1rem;
+      }
+    }
+
+    .search-area {
+      input[type="search"], button[type="submit"] {
+        border: none;
+        background-color: transparent;
+        color: $light-color;
+      }
+
+      input[type="search"] {
+        border-bottom: 1px solid $primary-color;
+        padding: .5rem;
+      }
+
+      button[type="submit"] {
+        margin-left: -5rem;
+      }
+    }
+
+
   }
 }

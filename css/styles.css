@@ -14,6 +14,7 @@
   margin-left: 2rem;
 }
 
+/** MIXINS **/
 .btn {
   background-color: #FEFEFE;
   color: #E51515;
@@ -128,4 +129,82 @@ img {
 
 .top-header .container .login-area span {
   display: none;
+}
+
+/**  NAV HEADER **/
+.nav-header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-header .navbar .navbar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-header .navbar .navbar-list li {
+  line-height: 8rem;
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav-header .navbar .navbar-list li .dropdown {
+  position: absolute;
+  background-color: #2a2c37;
+  width: 150%;
+  left: 50%;
+  z-index: 10;
+  top: 12rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  opacity: 0;
+}
+
+.nav-header .navbar .navbar-list li .dropdown li {
+  line-height: 4rem;
+}
+
+.nav-header .navbar .navbar-list li:hover {
+  background-color: #E51515;
+}
+
+.nav-header .navbar .navbar-list li:hover .dropdown {
+  opacity: 1;
+  top: 8rem;
+}
+
+.nav-header .navbar .navbar-list a {
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.nav-header .navbar .navbar-list i {
+  color: #FEFEFE;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+.nav-header .navbar .search-area input[type="search"], .nav-header .navbar .search-area button[type="submit"] {
+  border: none;
+  background-color: transparent;
+  color: #FEFEFE;
+}
+
+.nav-header .navbar .search-area input[type="search"] {
+  border-bottom: 1px solid #E51515;
+  padding: .5rem;
+}
+
+.nav-header .navbar .search-area button[type="submit"] {
+  margin-left: -5rem;
 }
