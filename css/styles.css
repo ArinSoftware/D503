@@ -167,6 +167,7 @@ img {
   -webkit-transition: all .5s;
   transition: all .5s;
   opacity: 0;
+  visibility: hidden;
 }
 
 .nav-header .navbar .navbar-list li .dropdown li {
@@ -179,6 +180,7 @@ img {
 
 .nav-header .navbar .navbar-list li:hover .dropdown {
   opacity: 1;
+  visibility: visible;
   top: 8rem;
 }
 
@@ -207,4 +209,29 @@ img {
 
 .nav-header .navbar .search-area button[type="submit"] {
   margin-left: -5rem;
+}
+
+/**  MAIN SLIDER **/
+.main-slider .single-slide {
+  position: relative;
+}
+
+.main-slider .single-slide .slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.main-slider .single-slide .slide-overlay .slide-content {
+  position: absolute;
+  top: 25%;
+  width: 80%;
+  border-top: 2px solid #E51515;
+  border-bottom: 2px solid #E51515;
+  padding: 10rem 7rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(black));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), black);
 }
