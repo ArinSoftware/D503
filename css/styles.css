@@ -68,6 +68,14 @@ body {
   width: 100%;
 }
 
+h2 {
+  font-family: "Changa", sans-serif;
+  font-size: 5rem;
+  color: #FEFEFE;
+  letter-spacing: .5rem;
+  font-weight: 300;
+}
+
 a {
   text-decoration: none;
   text-transform: uppercase;
@@ -234,4 +242,49 @@ img {
   padding: 10rem 7rem;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(black));
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), black);
+}
+
+.main-slider .single-slide .slide-overlay .slide-content p {
+  font-size: 1.4rem;
+}
+
+/** CUSTOM  OWL CAROUSEL **/
+.owl-theme {
+  position: relative;
+}
+
+.owl-theme .owl-dots {
+  position: absolute;
+  top: 6rem;
+  right: 10%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  margin-right: 1.3rem;
+  width: 3.3rem;
+  height: 3.3rem;
+  text-align: center;
+  border-radius: 4rem;
+  background-color: transparent;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.owl-theme .owl-dots .owl-dot.active, .owl-theme .owl-dots .owl-dot:hover {
+  color: #E51515;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  font-size: 2.5rem;
+  font-family: "Changa", sans-serif;
+  background: transparent;
 }
