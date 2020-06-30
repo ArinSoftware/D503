@@ -15,6 +15,7 @@
 }
 
 /** MIXINS **/
+/** BUTTONS **/
 .btn {
   background-color: #FEFEFE;
   color: #E51515;
@@ -40,6 +41,63 @@
 .btn-primary:hover {
   background-color: #FEFEFE;
   color: #E51515;
+}
+
+/** BADGES **/
+.badge {
+  border: none;
+  padding: .2rem 2.4rem;
+  font-size: 1.6rem;
+  color: #FEFEFE;
+  background-color: #E51515;
+  margin: 5rem;
+  letter-spacing: .2rem;
+}
+
+.badge-tech {
+  background-color: #08ABBD;
+}
+
+.badge-game {
+  background-color: #FFB320;
+}
+
+@-webkit-keyframes mainAni {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    border-top: 0px solid #E51515;
+  }
+  50% {
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    border-top: 2px solid #E51515;
+  }
+}
+
+@keyframes mainAni {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    border-top: 0px solid #E51515;
+  }
+  50% {
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    border-top: 2px solid #E51515;
+  }
 }
 
 /** GENERAL SETTINGS **/
@@ -68,17 +126,30 @@ body {
   width: 100%;
 }
 
-h2 {
+h1, h2, h3, h4, h5 {
   font-family: "Changa", sans-serif;
+  color: #E51515;
+  font-weight: 300;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
   font-size: 5rem;
   color: #FEFEFE;
-  letter-spacing: .5rem;
-  font-weight: 300;
+}
+
+h4 {
+  font-size: 2rem;
+  color: #FEFEFE;
 }
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
   font-family: "Changa", sans-serif;
   color: #FEFEFE;
 }
@@ -106,12 +177,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.top-header .container .logo h1 {
-  font-size: 5rem;
-  font-family: "Changa", sans-serif;
-  color: #E51515;
 }
 
 .top-header .container .top-social-menu {
@@ -242,6 +307,8 @@ img {
   padding: 10rem 7rem;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(black));
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), black);
+  -webkit-animation: mainAni 3s ease-out;
+          animation: mainAni 3s ease-out;
 }
 
 .main-slider .single-slide .slide-overlay .slide-content p {
@@ -287,4 +354,48 @@ img {
   font-size: 2.5rem;
   font-family: "Changa", sans-serif;
   background: transparent;
+}
+
+/** LATEST NEWS **/
+.latest-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #E51515;
+  height: 8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.latest-news-title {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.latest-news-content {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  background-color: #14151A;
+  height: 100%;
+}
+
+.latest-news-content .news-ticker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 8rem;
+}
+
+.latest-news-content .news-ticker p {
+  color: #FEFEFE;
+  font-size: 1.4rem;
 }

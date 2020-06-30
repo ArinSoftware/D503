@@ -1,5 +1,6 @@
 @import 'abstracts';
 @import 'components';
+@import 'animations';
 
 /** GENERAL SETTINGS **/
 
@@ -27,17 +28,31 @@ body {
   width: 100%;
 }
 
-h2 {
+h1, h2, h3, h4, h5 {
   font-family: $primary-font;
+  color: $primary-color;
+  font-weight: 300;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
   font-size: 5rem;
   color: $light-color;
-  letter-spacing: .5rem;
-  font-weight: 300;
+}
+
+h4 {
+  font-size: 2rem;
+  color: $light-color;
 }
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
+  
   font-family: $primary-font;
   color: $light-color;
 }
@@ -58,14 +73,6 @@ img {
   .container {
     @include flex-display(flex, center, space-between);
 
-    .logo {
-
-      h1 {
-        font-size: 5rem;
-        font-family: $primary-font;
-        color: $primary-color;
-      }
-    }
 
     .top-social-menu {
       display: flex;
@@ -192,6 +199,7 @@ img {
         border-bottom: 2px solid $primary-color;
         padding: 10rem 7rem;
         background: linear-gradient(to right, rgba(0,0,0, .6), rgba(0,0,0, 1));
+        animation: mainAni 3s ease-out;
 
         p {
           font-size: 1.4rem;
@@ -235,6 +243,38 @@ img {
         font-size: 2.5rem;
         font-family: $primary-font;
         background: transparent;
+      }
+    }
+  }
+}
+
+
+/** LATEST NEWS **/ 
+
+.latest-news {
+  display: flex;
+  background-color: $primary-color;
+  height: 8rem;
+  align-items: center;
+
+  &-title {
+    flex-basis: 25%;
+    text-align: right;
+    padding-right: 2rem;
+  }
+
+  &-content {
+    flex-basis: 75%;
+    background-color: $secondary-color;
+    height: 100%;
+
+    .news-ticker {
+      @include flex-display(flex, center, space-between);
+      line-height: 8rem;
+
+      p {
+        color: $light-color;
+        font-size: 1.4rem;
       }
     }
   }

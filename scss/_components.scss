@@ -1,3 +1,5 @@
+/** BUTTONS **/
+
 .btn {
     background-color: $light-color;
     color: $primary-color;
@@ -21,6 +23,27 @@
             background-color: $light-color;
             color: $primary-color;
         }
+    }
+
+}
+
+/** BADGES **/
+
+.badge {
+    border: none;
+    padding: .2rem 2.4rem;
+    font-size: 1.6rem;
+    color: $light-color;
+    background-color: $primary-color;
+    margin: 5rem;
+    letter-spacing: .2rem;
+
+    &-tech {
+        background-color: $comment-color; 
+    }
+
+    &-game {
+        background-color: $date-color;
     }
 
 }
