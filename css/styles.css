@@ -232,8 +232,8 @@ img {
 
 .top-header .container .top-social-menu li a {
   font-size: 2rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .top-header .container .top-social-menu li:hover a {
@@ -266,8 +266,8 @@ img {
 .nav-header .navbar .navbar-list li {
   line-height: 8rem;
   position: relative;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .nav-header .navbar .navbar-list li .dropdown {
@@ -277,8 +277,8 @@ img {
   left: 50%;
   z-index: 10;
   top: 12rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
 }
@@ -378,8 +378,8 @@ img {
   text-align: center;
   border-radius: 4rem;
   background-color: transparent;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .owl-theme .owl-dots .owl-dot.active, .owl-theme .owl-dots .owl-dot:hover {
@@ -453,8 +453,39 @@ img {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-row-gap: 4rem;
-  grid-column-gap: 8rem;
+  grid-column-gap: 4rem;
       grid-template-areas: 'item-1 item-1 item-1 item-2' 'item-3 item-4 item-5 item-6';
+}
+
+.recent-games-content .recent-game-featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recent-games-content .recent-game-featured .recent-game-thumbnail {
+  height: 100%;
+}
+
+.recent-games-content .recent-game-featured .recent-game-thumbnail img {
+  height: 100%;
+}
+
+.recent-games-content .recent-game-featured .rating {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+}
+
+.recent-games-content .recent-game-featured .game-title {
+  font-size: 3rem !important;
 }
 
 .recent-games-content .recent-game {
@@ -470,8 +501,8 @@ img {
 
 .recent-games-content .recent-game-thumbnail img {
   width: 100%;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .recent-games-content .recent-game-thumbnail::after {
@@ -496,14 +527,14 @@ img {
 .recent-games-content .recent-game:hover .recent-game-thumbnail img, .recent-games-content .recent-game:focus .recent-game-thumbnail img {
   -webkit-transform: scale(1.1) rotate(5deg);
           transform: scale(1.1) rotate(5deg);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .recent-games-content .recent-game:hover .recent-game-thumbnail .rating, .recent-games-content .recent-game:focus .recent-game-thumbnail .rating {
   opacity: 1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .recent-games-content .recent-game-content {
@@ -511,12 +542,14 @@ img {
 }
 
 .recent-games-content .recent-game-content .game-title {
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  letter-spacing: 0;
 }
 
 .recent-games-content .recent-game-content .game-title a {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .recent-games-content .recent-game-content .game-title a:hover {
@@ -533,13 +566,13 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .recent-games-content .recent-game-content .game-meta .game-date {
   color: #FFB320;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .recent-games-content .recent-game-content .game-meta .game-date:hover {
