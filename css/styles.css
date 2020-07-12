@@ -94,6 +94,77 @@
   color: #E51515;
 }
 
+/** REVIEWS **/
+.review {
+  padding: 5rem;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-left: 10rem;
+  border-left: 1px solid #E51515;
+  border-bottom: 1px solid #E51515;
+  -webkit-transform: skew(-28deg);
+          transform: skew(-28deg);
+}
+
+.review > * {
+  -webkit-transform: skew(28deg);
+          transform: skew(28deg);
+}
+
+.review-tags {
+  font-size: 1.5rem;
+  color: #FEFEFE;
+  text-transform: uppercase;
+}
+
+.review-text {
+  margin: 1rem 0;
+}
+
+.review-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-user img {
+  width: 8rem;
+  margin-right: 3rem;
+  border-radius: 50%;
+}
+
+.review-user-detail {
+  font-family: "Changa", sans-serif;
+  margin-right: 3rem;
+}
+
+.review-user-detail .review-user-name {
+  color: #E51515;
+}
+
+.review-user-detail .review-user-date {
+  color: #FFB320;
+}
+
+.review-user-platform :not(:last-child) {
+  color: #E51515;
+}
+
+.review-user-platform .fab {
+  margin: 0 1rem;
+}
+
+.review-user-rating {
+  margin-left: auto;
+}
+
+.review-user-rating .checked {
+  color: #E51515;
+}
+
 @-webkit-keyframes mainAni {
   0% {
     opacity: 0;
@@ -619,4 +690,36 @@ img {
   -ms-grid-row: 2;
   -ms-grid-column: 4;
   grid-area: item-6;
+}
+
+/** LATEST REVIEWED SECTION **/
+.last-reviewed {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  background-color: #14151A;
+}
+
+.last-reviewed-detail {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.last-reviewed-image {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#e51515), to(rgba(229, 21, 21, 0.1))), url(../img/game_3.jpg);
+  background-image: linear-gradient(to right bottom, #e51515, rgba(229, 21, 21, 0.1)), url(../img/game_3.jpg);
+  background-size: cover;
+  height: 100%;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
 }
