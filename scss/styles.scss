@@ -296,7 +296,7 @@ img {
 
   &-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-row-gap: 4rem;
     grid-column-gap: 4rem;
@@ -459,4 +459,99 @@ img {
     height: 100%;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
   }
+}
+
+/** GALLERY SECTION **/
+
+.masonary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 20rem);
+  grid-gap: 1rem;
+
+  &-item {
+    position: relative;
+    cursor: pointer;
+    background-color: $primary-color;
+
+    &-1 {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    &-2 {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+    }
+
+    &-3 {
+      grid-row: 1;
+      grid-column: 3 / span 2;
+    }
+
+    &-4 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    &-5 {
+      grid-row: 2;
+      grid-column: 3;
+    }
+
+    &-6 {
+      grid-row: 2 / span 2;
+      grid-column: 4;
+    }
+
+    &-7 {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    &-8 {
+      grid-row: 3;
+      grid-column: 2 / span 2;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.masonary-item .masonary-image {
+  transition: 1s ease;
+}
+
+.masonary-item:hover .masonary-image {
+  opacity: 0.3;
+}
+
+.masonary-item:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  //background-color: #4CAF50;
+  color: white;
+  font-size: 1.5rem;
+  //padding: 16px 32px;
+  text-transform: uppercase;
+  
 }
