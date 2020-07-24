@@ -137,3 +137,63 @@
         }
     }
 }
+
+/** CRADS **/
+
+.card {
+    height: 40rem;
+    perspective: 1000px;
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: all 1s;
+    }
+
+    .card-front {
+        background-color: $primary-color;
+    }
+
+    .card-back {
+        background-color: $secondary-color;
+        transform: rotateY(180deg);
+        display: table;
+
+        &-content {
+            display: table-cell;
+            vertical-align: middle;
+
+            p {
+                font-size: 1.8rem;
+
+            }
+
+            a {
+                transition: $general-transition;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    &:hover .card-front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .card-back {
+        transform: none;
+    }
+}

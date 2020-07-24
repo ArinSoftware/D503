@@ -33,6 +33,12 @@ $general-transition: all .5s;
     }
 }
 
+.m {
+    &-1 {
+        margin: 1rem;
+    }
+}
+
 .text-light {
     color: $light-color;
 }

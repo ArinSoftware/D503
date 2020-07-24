@@ -14,6 +14,10 @@
   margin-left: 2rem;
 }
 
+.m-1 {
+  margin: 1rem;
+}
+
 .text-light {
   color: #FEFEFE;
 }
@@ -163,6 +167,71 @@
 
 .review-user-rating .checked {
   color: #E51515;
+}
+
+/** CRADS **/
+.card {
+  height: 40rem;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.card .card-front, .card .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card .card-front {
+  background-color: #E51515;
+}
+
+.card .card-back {
+  background-color: #14151A;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  display: table;
+}
+
+.card .card-back-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.card .card-back-content p {
+  font-size: 1.8rem;
+}
+
+.card .card-back-content a {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card .card-back-content a:hover {
+  color: #E51515;
+}
+
+.card:hover .card-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  -webkit-transform: none;
+          transform: none;
 }
 
 @-webkit-keyframes mainAni {
@@ -934,4 +1003,24 @@ img {
   opacity: 0;
   -webkit-transform: translateY(5rem);
           transform: translateY(5rem);
+}
+
+/** TEAM SECTION **/
+.team-members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.team-members .team-member {
+  width: 100%;
+  height: 100%;
+}
+
+.team-members .team-member:first-child {
+  margin-right: 5rem;
+}
+
+.team-members .team-member:last-child {
+  margin-left: 5rem;
 }

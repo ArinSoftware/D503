@@ -644,3 +644,23 @@ img {
     }
   }
 }
+
+
+/** TEAM SECTION **/
+
+.team-members {
+  display: flex;
+
+  .team-member {
+    width: 100%;
+    height: 100%;
+
+    &:first-child {
+      margin-right: 5rem;
+    }
+
+    &:last-child {
+      margin-left: 5rem;
+    }
+  }
+}
