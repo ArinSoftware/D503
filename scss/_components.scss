@@ -10,6 +10,10 @@
     letter-spacing: 2px;
     transition: all .5s;
 
+    @include media(medium) {
+        padding: .5rem 1rem;
+    }
+
     &:hover {
         background-color: $primary-color;
         color: $light-color;

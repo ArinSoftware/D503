@@ -42,6 +42,19 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 7rem;
+
+  @include media(large) {
+    color: green;
+    font-size: 5rem;
+  }
+
+  @include media(medium) {
+    color: blue;
+  }
+
+  @include media(small) {
+    color: yellow;
+  }
 }
 
 h2 {
@@ -73,6 +86,43 @@ img {
   width: 100%;
 }
 
+/**  RESPONSIVE HEADER **/
+
+.open-menu, .close-menu {
+  font-size: 3rem;
+  color: $light-color;
+  cursor: pointer;
+  display: none;
+  transition: $general-transition;
+
+  @include media(large) {
+    display: block;
+  }
+}
+
+.open-menu {
+  margin-right: 2rem;
+}
+
+.close-menu {
+    @include media(large) {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.3rem;
+  }
+}
+
+.open-menu:hover, .close-menu:hover {
+  color: $primary-color;
+}
+
+#chek {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
 /**  TOP HEADER **/
 
 .top-header {
@@ -81,13 +131,27 @@ img {
   .container {
     @include flex-display(flex, center, space-between);
 
+    @include media(small) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
 
     .top-social-menu {
       display: flex;
 
+      @include media(small) {
+        order: 4;
+      }
+
       li {
         margin: 0 1rem;
         padding: 1rem;
+
+        @include media(large) {
+          margin: 0 .5rem;
+          padding: .5rem;
+        }
 
         a {
           font-size: 2rem;
@@ -102,8 +166,20 @@ img {
 
     .login-area {
       span {
-        display: none;
+        display: inline-block;
+
+        @include media(medium) {
+          display: none;
+        }
       }
+
+      i {
+        display: none;
+        @include media(medium) {
+          display: inline-block;
+        }
+      }
+
     }
   }
 }
@@ -112,11 +188,37 @@ img {
 /**  NAV HEADER **/
 
 .nav-header {
+
+  @include media(large) {
+    position: fixed;
+    background-color: rgba($secondary-color, .7);
+    top: 0;
+    width: 50%;
+    right: -50%;
+    z-index: 10;
+    height: 100vh;
+    transition: $general-transition;
+
+    &.active {
+      right: 0;
+    }
+  }
+
   .navbar {
     @include flex-display(flex, center, space-between);
 
+    @include media(large) {
+      flex-direction: column;
+    }
+
     .navbar-list {
       display: flex;
+
+      @include media(large) {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+      }
 
       li {
         line-height: 8rem;
@@ -164,6 +266,12 @@ img {
     }
 
     .search-area {
+
+      @include media(large) {
+        align-self: flex-start;
+        margin-left: 2rem;
+      }
+
       input[type="search"], button[type="submit"] {
         border: none;
         background-color: transparent;
