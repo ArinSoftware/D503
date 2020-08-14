@@ -22,6 +22,10 @@ body {
   background-color: $light-color;
 }
 
+main {
+  overflow: hidden;
+}
+
 .container {
   max-width: 114rem;
   margin: 0 auto;
@@ -30,6 +34,14 @@ body {
 
 section {
   padding: 8rem 0;
+
+  @include media(medium) {
+    padding: 4rem 0;
+  }
+
+  @include media(small) {
+    padding: 2rem 0;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -44,22 +56,18 @@ h1 {
   font-size: 7rem;
 
   @include media(large) {
-    color: green;
     font-size: 5rem;
   }
 
-  @include media(medium) {
-    color: blue;
-  }
-
-  @include media(small) {
-    color: yellow;
-  }
 }
 
 h2 {
   font-size: 5rem;
   color: $light-color;
+
+  @include media(large) {
+    font-size: 3.6rem;
+  }
 }
 
 h3 {
@@ -317,8 +325,25 @@ img {
         background: linear-gradient(to right, rgba(0,0,0, .6), rgba(0,0,0, 1));
         animation: mainAni 3s ease-out;
 
+        @include media(large) {
+          width: 100%;
+          padding: 6rem 4rem;
+        }
+
+        @include media(medium) {
+          padding: 3rem 2rem;
+        }
+
+        @include media(small) {
+          padding: 2rem 1rem;
+        }
+
         p {
           font-size: 1.4rem;
+
+          @include media(medium) {
+            font-size: 1.2rem;
+          }
         }
 
       }
@@ -336,6 +361,19 @@ img {
     right: 10%;
     z-index: 5;
     display: flex;
+
+    @include media(large) {
+      top: 2rem;
+    }
+
+    @include media(medium) {
+      top: 1rem;
+    }
+
+    @include media(small) {
+      top: .5rem;
+    }
+
 
     .owl-dot {
       display: inline-block;
@@ -373,6 +411,10 @@ img {
   height: 8rem;
   align-items: center;
 
+  @include media(medium) {
+    flex-direction: column;
+  }
+
   &-title {
     flex-basis: 25%;
     text-align: right;
@@ -388,9 +430,17 @@ img {
       @include flex-display(flex, center, space-between);
       line-height: 8rem;
 
+      @include media(medium) {
+        line-height: 4rem;
+      }
+
       p {
         color: $light-color;
         font-size: 1.4rem;
+
+        @include media(medium) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -411,8 +461,68 @@ img {
     grid-template-areas: 'item-1 item-1 item-1 item-2'
                          'item-3 item-4 item-5 item-6'  ;
 
+                         .recent-game-1 {
+                          grid-area: item-1;
+                        }
+                        
+                        .recent-game-2 {
+                          grid-area: item-2;
+                        }
+                        
+                        .recent-game-3 {
+                          grid-area: item-3;
+                        }
+                        
+                        .recent-game-4 {
+                          grid-area: item-4;
+                        }
+                        
+                        .recent-game-5 {
+                          grid-area: item-5;
+
+                          @include media(medium) {
+                            display: none;
+                          }
+
+                          @include media(small) {
+                            display: block;
+                          }
+                        }
+                        
+                        .recent-game-6 {
+                          grid-area: item-6;
+
+                          @include media(medium) {
+                            display: none;
+                          }
+                        }
+
+    @include media(large) {
+      grid-row-gap: 2rem;
+      grid-column-gap: 2rem;
+    }
+
+    @include media(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 'item-1 item-1 item-1'
+                           'item-2 item-3 item-4'
+                           'item-5 item-6 item-7';
+    }
+  
+    @include media(small) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'item-1 item-1'
+                           'item-2 item-3'
+                           'item-4 item-5'
+                           'item-6 item-7';
+    }
+
     .recent-game-featured {
       @include flex-display(flex, center, space-between);
+
+      @include media(small) {
+        flex-direction: column;
+      }
 
       .recent-game-thumbnail {
         height: 100%;
@@ -524,29 +634,7 @@ img {
 }
 
 
-.recent-game-1 {
-  grid-area: item-1;
-}
 
-.recent-game-2 {
-  grid-area: item-2;
-}
-
-.recent-game-3 {
-  grid-area: item-3;
-}
-
-.recent-game-4 {
-  grid-area: item-4;
-}
-
-.recent-game-5 {
-  grid-area: item-5;
-}
-
-.recent-game-6 {
-  grid-area: item-6;
-}
 
 /** LATEST REVIEWED SECTION **/
 
@@ -556,8 +644,22 @@ img {
   padding: 0;
   background-color: $secondary-color;
 
+
+
   &-detail {
     flex-basis: 40%;
+
+    @include media(large) {
+      flex-basis: 75%;
+    }
+
+    @include media(medium) {
+      flex-basis: 100%;
+    }
+
+    @include media(small) {
+      text-align: center;
+    }
   }
 
   &-image {
@@ -566,6 +668,16 @@ img {
     background-size: cover;
     height: 100%;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+
+    @include media(large) {
+      flex-basis: 25%;
+      clip-path: none;
+      background-position: center center;
+    }
+
+    @include media(medium) {
+      flex-basis: 0%;
+    }
   }
 }
 
